@@ -1,4 +1,4 @@
-
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 /**
@@ -6,6 +6,7 @@ import java.util.Scanner;
  */
 public class main {
     public static void main(String[] args) {
+        NumberFormat currency=NumberFormat.getCurrencyInstance();
         double price;
         double percentagesale;
         double tip;
@@ -21,9 +22,9 @@ public class main {
         total=price-(price*percentagesale/100);
         total2=(total*tip/100);
 
-        System.out.println("So your toal price is: "+price);
-        System.out.println("Your total price with sale is : "+total);
-        System.out.println("Your total tip is: " +total2);
+        System.out.println("So your toal price is: "+currency.format(price));
+        System.out.println("Your total price with sale is : "+currency.format(total));
+        System.out.println("Your total tip is: " +currency.format(total2));
 
         }
     }
