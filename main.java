@@ -12,6 +12,7 @@ public class main {
         double tip;
         double total;
         double total2;
+        double total3;
         Scanner scnr=new Scanner(System.in);
         System.out.println("How much do you need to pay all?");
         price=scnr.nextDouble();
@@ -21,11 +22,12 @@ public class main {
         tip=scnr.nextDouble();
         total=price-(price*percentagesale/100);
         total2=(total*tip/100);
+        total3=(total-total2);
 
         System.out.println("So your toal price is: "+currency.format(price));
         System.out.println("Your total price with sale is : "+currency.format(total));
         System.out.println("Your total tip is: " +currency.format(total2));
+        System.out.println("You need to pay : "+ currency.format(total3) );
 
-        }
     }
-
+}
